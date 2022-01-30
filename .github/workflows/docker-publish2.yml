@@ -67,5 +67,5 @@ jobs:
         with:
           context: "fastcgi helloworld"
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}2
+          tags: ${{ steps.meta.outputs.tags }}2
+          labels: ${{ steps.meta.outputs.labels }}
