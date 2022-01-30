@@ -17,6 +17,5 @@ COPY . .
 RUN g++ fastcgitest.cpp -lfcgi++ -lfcgi -o fastcgir
 
 RUN chmod +x start.sh
-WORKDIR /app
 EXPOSE 80
 CMD ["./start.sh"]
