@@ -15,4 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: cd "fastcgi helloworld" && docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: cd "fastcgi helloworld" && docker build . --file Dockerfile --tag fastcgi:$(date +%s)
+  build2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image 2
+        run: cd "fastcgi with file loader" && docker build . --file Dockerfile --tag fastcgi2:$(date +%s)
